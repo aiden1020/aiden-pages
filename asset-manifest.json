@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aiden-pages/static/css/main.30d72a9d.css",
-    "main.js": "/aiden-pages/static/js/main.7932ee1f.js",
+    "main.js": "/aiden-pages/static/js/main.5f275437.js",
     "static/js/787.1911742d.chunk.js": "/aiden-pages/static/js/787.1911742d.chunk.js",
     "index.html": "/aiden-pages/index.html",
     "main.30d72a9d.css.map": "/aiden-pages/static/css/main.30d72a9d.css.map",
-    "main.7932ee1f.js.map": "/aiden-pages/static/js/main.7932ee1f.js.map",
+    "main.5f275437.js.map": "/aiden-pages/static/js/main.5f275437.js.map",
     "787.1911742d.chunk.js.map": "/aiden-pages/static/js/787.1911742d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30d72a9d.css",
-    "static/js/main.7932ee1f.js"
+    "static/js/main.5f275437.js"
   ]
 }
