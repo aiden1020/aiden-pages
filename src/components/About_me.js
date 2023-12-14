@@ -12,7 +12,7 @@ const AboutMe =()=>{
             direction="column"
             alignItems="center"
             justifyContent="center"
-            sx={{ marginTop:'60px'}}
+            sx={{ marginTop:'20px'}}
           >
             <Grid item xs={3}>
               <Stack direction="row" spacing={2}>

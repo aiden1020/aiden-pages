@@ -3,16 +3,17 @@ import Stack from '@mui/material/Stack';
 import Typography  from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import './Home.css'
+
 const Home =()=>{
     return(
-      <div className='page-container' style={{ display: 'flex', flexDirection: 'column' }}>
+      <div className='page-container' style={{ display: 'flex', flexDirection: 'column' , zIndex: 1}}>
           <Grid
             container
             spacing={0}
             direction="column"
             alignItems="center"
             justifyContent="center"
-            sx={{ marginTop:'150px' ,paddingX:'5%'}}
+            sx={{ marginTop:'10px' ,paddingX:'5%'}}
           >
             <Grid item xs={3}>
               <Stack direction="row" spacing={2}>
@@ -20,7 +21,7 @@ const Home =()=>{
                   <Typography fontSize={48}><strong>I'm Aiden</strong></Typography>
                   <Typography fontSize={36} color={'gray'}><strong>Hongkongese, Undergraduate Computer Science and Engineering</strong></Typography>
                 </Stack>
-                <img className= 'person-image'src={process.env.PUBLIC_URL +"/image.png"} alt='Home Personal' />
+                <img className= 'person-image'src={process.env.PUBLIC_URL +"/img_home.png"} alt='Home Personal' />
               </Stack>
             </Grid>
           </Grid>

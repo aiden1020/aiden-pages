@@ -19,7 +19,7 @@ const NavMenu = () => {
   }, [location.pathname]);
 
   return (
-    <header>
+    <header style={{ zIndex: 2 }}>
       <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white " container light>
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!collapsed} navbar>
