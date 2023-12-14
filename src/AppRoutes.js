@@ -1,9 +1,16 @@
 import Home  from "./components/Home";
+import AboutMe from "./components/About_me";
 const AppRoutes = [
   {
-    index: true,
+    path: '/',
     element: <Home />,
-  }
+
+  },
+  {
+    path: '/about',
+    element: <AboutMe />,
+
+  },
 ];
 
 export default AppRoutes;

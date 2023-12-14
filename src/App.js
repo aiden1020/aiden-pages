@@ -1,37 +1,36 @@
-import './App.css';
+// App.js
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import {  BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles'; 
-
 import AppRoutes from './AppRoutes';
-import Layout  from './components/Layout';
+import Layout from './components/Layout';
 
 const theme = createTheme({
   typography: {
     allVariants: {
-      fontStyle : 'Agrandir',
+      fontStyle: 'Agrandir',
+      textAlign: 'center',
       textTransform: 'none',
       fontSize: 18,
     },
   },
 });
-const App=()=> {
+
+const App = () => {
   return (
     <ThemeProvider theme={theme}>
+      <BrowserRouter basename={ process.env.PUBLIC_URL }>
+        <Layout>
+          <Routes>
+            {AppRoutes.map((route, index) => {
+              const { element, path, ...rest } = route;
+              return <Route key={index} {...rest} path={path} element={element} />;
+            })}
+          </Routes>
+        </Layout>
+      </BrowserRouter>
 
-    <BrowserRouter>
-    <Layout>
-      <Routes>
-        {AppRoutes.map((route, index) => {
-          const { element,  ...rest } = route;
-          return <Route key={index} {...rest} element={element} />;
-        })}
-      </Routes>
-    </Layout>
-    </BrowserRouter>
-    </ThemeProvider >
-
+    </ThemeProvider>
   );
 }
 

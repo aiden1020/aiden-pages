@@ -15,7 +15,7 @@ const NavMenu = () => {
 
   // 監聽路由變化，決定是否顯示黑點
   useEffect(() => {
-    setShowDot(location.pathname === '/');
+    setShowDot(location.pathname === '/aiden-pages');
   }, [location.pathname]);
 
   return (
@@ -24,11 +24,17 @@ const NavMenu = () => {
         <NavbarToggler onClick={toggleNavbar} className="mr-2" />
         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!collapsed} navbar>
           <ul className="navbar-nav flex-grow">
-            <NavItem>
-              <NavLink tag={Link} className="text-dark" to="/">
-                Home {showDot&& collapsed && <span className="dot">&#8226;</span>}
-              </NavLink>
-            </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="text-dark" to="/">
+              Home {showDot && collapsed && <span className="dot">&#8226;</span>}
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} className="text-dark" to="/about">
+              About me {showDot && collapsed && <span className="dot">&#8226;</span>}
+            </NavLink>
+          </NavItem>
+
 
           </ul>
         </Collapse>
