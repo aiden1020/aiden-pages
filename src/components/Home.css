@@ -1,6 +1,7 @@
 .person-image {
-  max-width: 75vh;
+  width: 100%;
   height: auto;
+  
 }
 .page-container{
   width: 100%;

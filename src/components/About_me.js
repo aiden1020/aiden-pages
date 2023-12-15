@@ -3,6 +3,11 @@ import Stack from '@mui/material/Stack';
 import Typography  from '@mui/material/Typography';
 import { Grid } from '@mui/material';
 import './Home.css'
+const font_size ={
+  xs: 16, 
+  sm: 18, 
+  md: 20, 
+}
 const AboutMe =()=>{
     return(
       <div className='page-container' style={{ display: 'flex', flexDirection: 'column' }}>
@@ -12,15 +17,25 @@ const AboutMe =()=>{
             direction="column"
             alignItems="center"
             justifyContent="center"
-            sx={{ marginTop:'20px'}}
+            sx={{ marginTop:'10px'}}
           >
             <Grid item xs={3}>
-              <Stack direction="row" spacing={2}>
-                <Stack spacing={1} alignItems={'center'} style={{ marginTop: '12%' }}>
-                  <Typography fontSize={48}><strong>About me</strong></Typography>
-                  <Typography fontSize={36} color={'gray'}><strong>Hongkongese, Undergraduate Computer Science and Engineering</strong></Typography>
-                </Stack>
-                <img className= 'person-image'src={process.env.PUBLIC_URL +"/DSC00851.jpeg"} alt='Home Personal' />
+              <Stack direction={{ xs: 'column', sm: 'column',md: 'row'  }}
+  spacing={{ xs: 1, sm: 2, md: 4 }}>
+                <Grid container spacing={2} alignItems={'center'} style={{  padding: '6%' }}>
+                  <Grid item xs={12} md={12} >
+                    <Typography fontSize={font_size} textAlign={'left'}>Hello there! I'm Wong Tsz To, Aiden, a passionate individual from Hong Kong currently studying at National Sun Yat-sen University (NSYSU) in Taiwan.</Typography>
+                  </Grid>
+                  <Grid item xs={12} md={12} >
+                    <Typography   fontSize={font_size}textAlign={'left'}>I'm particularly enthusiastic about badminton and maintaining a healthy lifestyle through fitness activities. My interest also extends to exploring the intersection of technology and innovation, keeping up with the latest advancements that shape our rapidly evolving world.</Typography>
+                  </Grid>
+                  <Grid item xs={12} md={12}  >
+                    <Typography   fontSize={font_size} textAlign={'left'}>Explore my journey on this platform, where I share insights and experiences. If you share similar interests or have exciting opportunities to discuss, feel free to reach out. Let's connect and build something meaningful together!</Typography>
+                  </Grid>
+                </Grid>
+                <Grid container spacing={2} alignItems={'center'} style={{  padding: '1%' }}>
+                  <img className= 'person-image'src={process.env.PUBLIC_URL +"/IMG_2781.jpeg"} alt='Home Personal' />
+                </Grid>
               </Stack>
             </Grid>
           </Grid>
