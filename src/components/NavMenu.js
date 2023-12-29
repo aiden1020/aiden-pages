@@ -16,6 +16,7 @@ const NavMenu = () => {
   // 監聽路由變化，決定是否顯示黑點
   useEffect(() => {
     setShowDot(location.pathname === '/aiden-pages');
+    console.log("show")
   }, [location.pathname]);
 
   return (

@@ -15,6 +15,7 @@ html {
 .navbar {
   box-shadow: 0 5px 50px rgba(0, 0, 0, 0.1); /* 調整陰影的大小和顏色 */
   z-index: 99999;
+  font-family: '';
 }
 .navbar-nav {
   position: relative;
@@ -33,4 +34,5 @@ html {
   margin-top: -5px; /* 調整點的上邊距 */
   font-size: 40px; /* 調整點的大小 */
   color: black; /* 調整點的顏色 */
+  z-index: 999999;
 }

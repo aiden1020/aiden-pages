@@ -8,7 +8,7 @@ import Layout from './components/Layout';
 const theme = createTheme({
   typography: {
     allVariants: {
-      fontStyle: 'Agrandir',
+      fontFamily: ['Roboto Condensed', 'Agrandir'].join(','),
       textAlign: 'center',
       textTransform: 'none',
       fontSize: 18,
